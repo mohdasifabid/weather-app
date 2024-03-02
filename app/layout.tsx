@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Chakra_Providers } from "./ui/chakraProvider/page";
+import { React_Query_Provider } from "./ui/reactQueryProvider/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Chakra_Providers>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <React_Query_Provider>{children}</React_Query_Provider>
+        </body>
       </Chakra_Providers>
     </html>
   );
