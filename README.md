@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App using Next.js and Weatherbit API
+
+This Weather App is built using Create Next App, incorporating Chakra UI for styling, lodash for debouncing, and React Query to handle API calls. The app fetches current weather data from the Weatherbit API to provide users with up-to-date weather information.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/mohdasifabid/weather-app.git
+   cd weather-app
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Set up API Key:**
 
-## Learn More
+   - Get your API key by signing up at [Weatherbit](https://www.weatherbit.io/api).
+   - Create a `.env.local` file in the root of your project.
+   - Add the following line to the file:
 
-To learn more about Next.js, take a look at the following resources:
+     ```env
+     REACT_APP_WEATHERBIT_API_KEY=your-api-key-here
+     ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the application:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Current Weather Display:**
+  The app fetches and displays the current weather details, including temperature, description, and location.
+
+- **Search Functionality:**
+  Users can search for the current weather in different locations.
+
+- **Debouncing:**
+  Debouncing is implemented using lodash to improve the search input performance and reduce unnecessary API calls.
+
+- **Styling with Chakra UI:**
+  The application uses Chakra UI components for a clean and responsive design.
+
+- **React Query for API Calls:**
+  React Query is utilized to manage API calls and state management efficiently.
+
+## Dependencies
+
+- [Create Next App](https://create-next-app.js.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Lodash](https://lodash.com/)
+- [React Query](https://react-query.tanstack.com/)
+- [Weatherbit API](https://www.weatherbit.io/api)
+
+## Contributing
+
+Feel free to contribute to the project by submitting issues or pull requests.
+
+## License
+
+This Weather App is open source and available under the [MIT License](LICENSE).
