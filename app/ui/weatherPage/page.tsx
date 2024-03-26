@@ -2,12 +2,13 @@ import axios from "axios";
 import { useState } from "react";
 import { debounce } from "lodash";
 import { useQuery } from "@tanstack/react-query";
+require('dotenv').config();
 
 import { Box, Heading, Input, SkeletonText, Text } from "@chakra-ui/react";
+const apiKey = "92c7a8f788bd494fbee85f6d8126665e";
 
 export const WeatherPage: React.FC<any> = () => {
   const [city, setCity] = useState("");
-  const apiKey = "92c7a8f788bd494fbee85f6d8126665e";
   const debouncedSetCity = debounce(setCity, 500);
 
   const getWeather = async (selectedCity: string) => {
@@ -64,10 +65,17 @@ export const WeatherPage: React.FC<any> = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Heading size="md">Please enter the city in above 👆 field...</Heading>
+          <Heading size="md">
+            Please enter the city in above 👆 field...
+          </Heading>
         </Box>
       ) : (
-        <Box paddingTop={"2rem"} display="flex" width="100%" minHeight={"23rem"}>
+        <Box
+          paddingTop={"2rem"}
+          display="flex"
+          width="100%"
+          minHeight={"23rem"}
+        >
           <Box width={"100%"} display="flex" flexDir={"column"} gap={"2rem"}>
             <Box>
               <Heading textAlign="center" size={"md"}>

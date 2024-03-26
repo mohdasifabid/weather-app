@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Chakra_Providers } from "./ui/chakraProvider/page";
 import { ReactQueryProvider } from "./ui/reactQueryProvider/page";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
